@@ -1,11 +1,11 @@
 import axios from 'axios';
-// import { apiClient } from './apiClient';
+import { apiClient } from './apiClient';
 
 
 export const logIn = async (email: string, password: string) => {
     try {
 
-        const {data} = await axios.post('/api/auth/login', {email, password});
+        const {data} = await apiClient.post('/api/auth/login', {email, password});
         console.log('Login :', data);
         return data;
     } catch (error) {
@@ -25,7 +25,7 @@ export const logIn = async (email: string, password: string) => {
 export const signUp = async (name: string, email: string, password: string) => {
     try {
 
-        const {data} = await axios.post('/api/auth/register', {name, email, password});
+        const {data} = await apiClient.post('/api/auth/register', {name, email, password});
           console.log('Sign-up successful:', data);
         
           return data;
