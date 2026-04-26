@@ -1,6 +1,6 @@
 # IASF Login System (Hash Lab)
 
-A simple full‑stack app where users can **sign up**, **log in**, and try a **hashing demo** after login. You don’t need to read code to run it—just follow the steps below.
+A simple full‑stack app where users can **sign up**, **log in**, and try a **hashing demo** after login. You don’t need to read code to run it—just follow the steps below
 
 ## What this app does
 
