@@ -30,7 +30,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions));
 
 // simple request log for Render
 app.use((req: Request, res: Response, next) => {
