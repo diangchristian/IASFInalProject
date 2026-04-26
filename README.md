@@ -30,7 +30,7 @@ JWT_SECRET=change-this-to-any-random-text
 JWT_EXPIRES_IN=1d
 ```
 
-**What these mean (plain English):**
+**What these mean:**
 
 - **PORT**: the backend runs on port 3000 (don’t change this)
 - **DB_URI**: where your local MongoDB is running
