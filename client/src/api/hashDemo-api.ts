@@ -1,4 +1,5 @@
 import axios from "axios";
+import { apiClient } from "./apiClient";
 
 type HashDemoHashItem = {
     hashedOutput: string;
@@ -14,7 +15,7 @@ export const hashDemoRequest = async (input: string): Promise<HashDemoResponse> 
 
     console.log(input)
     try {
-        const {data} = await axios.post<HashDemoResponse>('/api/hash/demo', {input});
+        const {data} = await apiClient.post<HashDemoResponse>('/api/hash/demo', {input});
         console.log('Hash Result:', data);
         return data;
     } catch (error) {
