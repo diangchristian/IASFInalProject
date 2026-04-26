@@ -4,8 +4,9 @@ import connectToDatabase from "./database/mongodb";
 import { PORT } from "./config/env";
 
 
-
-
+app.get("/", (req, res) => {
+  res.send("API is running");
+});
 
 app.listen(PORT, async () => {
     
