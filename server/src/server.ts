@@ -16,13 +16,21 @@ const allowedOrigins = (
   .filter(Boolean);
 
 const corsOptions = {
-  origin: allowedOrigins,
+  origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+    if (!origin) return callback(null, true); // server-to-server / Postman
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+
+    console.warn(`[CORS BLOCKED] origin=${origin} allowed=${allowedOrigins.join(",")}`);
+    return callback(new Error("Not allowed by CORS"));
+  },
   credentials: true,
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
+  optionsSuccessStatus: 204,
 };
 
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 // simple request log for Render
 app.use((req: Request, res: Response, next) => {
