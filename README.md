@@ -9,7 +9,7 @@ A simple full‑stack app where users can **sign up**, **log in**, and try a **h
 
 ---
 
-## Slide‑ready overview (talk track)
+## Overview
 
 ### Problem
 - Demonstrate a secure login flow and show why hashing is useful.
