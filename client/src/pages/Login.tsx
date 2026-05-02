@@ -16,7 +16,7 @@ export default function Login() {
         {/* HEADER */}
         <div className="p-8 text-center space-y-2">
           <div className="flex items-center justify-center gap-2 text-primary">
-            <span className="tracking-widest font-bold text-sm">HASH LAB</span>
+            <span className="tracking-widest font-bold text-sm">HASH IN</span>
           </div>
 
           <h1 className="text-2xl font-bold text-white">Secure Login System</h1>
