@@ -1,4 +1,4 @@
-# IASF Login System (Hash Lab)
+# IASF Login System (HashIn)
 
 A simple full‑stack app where users can **sign up**, **log in**, and try a **hashing demo** after login.
 
